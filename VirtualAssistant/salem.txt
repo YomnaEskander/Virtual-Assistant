@@ -1,0 +1,32 @@
+we could add datasets by downloading it but we will write it ourselves using intents json file.
+ creating a bunch of messages that the user is likely to type in and mapping them to a group of appropriate responses.
+we will use this data by training a neural network to take a sentence of words and classify it as one of the tags in our file.
+we bind the tags to action aka functions 
+SpeechRecognition library has many classes 
+Recognizer helps in convert audio files to text
+tts is an instance engine that is text to speech 
+runAndWait() → None
+Blocks while processing all currently queued commands. Invokes callbacks for engine notifications appropriately. Returns when all commands queued before this call are emptied from the queue.
+we have to train a model that recognizes the intents and maps them to the functions to get out a an actionwe do this by using a libary called neural intents that has generic assistant as a class
+'C:/Users/PC/Downloads/intents.json'
+
+
+
+{"intents":
+[
+ {"tag": "greeting",
+  "patterns": ["Hey", "Hello", "What's up?", "How is it going?", "Hi", "Good day"],
+  "responses": ["Hello sir!", "Hello, what can i do for you?"]},
+ {"tag": "create_note",
+  "patterns": ["Please create a note", "New note", "Create a note", "I want to create a note"],
+  "responses": [""]},
+ {"tag": "add_todo",
+  "patterns": ["I want to do a note", "add a new todo", "add a todo to my list", "new items on my todo list"],
+  "responses": [""]},
+ {"tag": "show_todo",
+  "patterns": ["Show my todos", "What are my todos", "What is on my todos list"],
+  "responses": [""]},
+ {"tag": "exit",
+  "patterns": ["Bye", "Stop", "Quit", "I want to quit", "Goodbye", "I want to exit", "I hate to go"],
+  "responses": [""]}
+]} 
